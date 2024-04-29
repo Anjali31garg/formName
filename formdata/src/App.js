@@ -10,11 +10,18 @@ function App() {
 
   const handleSubmit = (e) =>{
     e.preventDefault();
-    if(fName && lName){
+    // if(fName && lName){
+    //   setFullName(`${fName} ${lName}`);
+    // }
+
+    if(fName === " " || fName === "" || lName === " " || lName === ""){
+      setFullName("");
+    }else{
       setFullName(`${fName} ${lName}`);
     }
-    
   } 
+  
+    
 
   return (
     <form onSubmit={handleSubmit}>
